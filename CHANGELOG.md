@@ -1,3 +1,69 @@
+# RMM 23.06.00 (7 Jun 2023)
+
+## 🚨 Breaking Changes
+
+- Update minimum Python version to Python 3.9 ([#1252](https://github.com/rapidsai/rmm/pull/1252)) [@shwina](https://github.com/shwina)
+
+## 🐛 Bug Fixes
+
+- Ensure Logger tests aren&#39;t run in parallel ([#1277](https://github.com/rapidsai/rmm/pull/1277)) [@robertmaynard](https://github.com/robertmaynard)
+- Pin to scikit-build&lt;0.17.2. ([#1262](https://github.com/rapidsai/rmm/pull/1262)) [@bdice](https://github.com/bdice)
+
+## 🛠️ Improvements
+
+- Require Numba 0.57.0+ &amp; NumPy 1.21.0+ ([#1279](https://github.com/rapidsai/rmm/pull/1279)) [@jakirkham](https://github.com/jakirkham)
+- Align test_cpp.sh with conventions in other RAPIDS repos. ([#1269](https://github.com/rapidsai/rmm/pull/1269)) [@bdice](https://github.com/bdice)
+- Switch back to using primary shared-action-workflows branch ([#1268](https://github.com/rapidsai/rmm/pull/1268)) [@vyasr](https://github.com/vyasr)
+- Update recipes to GTest version &gt;=1.13.0 ([#1263](https://github.com/rapidsai/rmm/pull/1263)) [@bdice](https://github.com/bdice)
+- Support CUDA 12.0 for pip wheels ([#1259](https://github.com/rapidsai/rmm/pull/1259)) [@bdice](https://github.com/bdice)
+- Add build vars ([#1258](https://github.com/rapidsai/rmm/pull/1258)) [@AyodeAwe](https://github.com/AyodeAwe)
+- Enable sccache hits from local builds ([#1257](https://github.com/rapidsai/rmm/pull/1257)) [@AyodeAwe](https://github.com/AyodeAwe)
+- Revert to branch-23.06 for shared-action-workflows ([#1256](https://github.com/rapidsai/rmm/pull/1256)) [@shwina](https://github.com/shwina)
+- run docs builds nightly too ([#1255](https://github.com/rapidsai/rmm/pull/1255)) [@AyodeAwe](https://github.com/AyodeAwe)
+- Build wheels using new single image workflow ([#1254](https://github.com/rapidsai/rmm/pull/1254)) [@vyasr](https://github.com/vyasr)
+- Update minimum Python version to Python 3.9 ([#1252](https://github.com/rapidsai/rmm/pull/1252)) [@shwina](https://github.com/shwina)
+- Remove usage of rapids-get-rapids-version-from-git ([#1251](https://github.com/rapidsai/rmm/pull/1251)) [@jjacobelli](https://github.com/jjacobelli)
+- Remove wheel pytest verbosity ([#1249](https://github.com/rapidsai/rmm/pull/1249)) [@sevagh](https://github.com/sevagh)
+- Update clang-format to 16.0.1. ([#1246](https://github.com/rapidsai/rmm/pull/1246)) [@bdice](https://github.com/bdice)
+- Remove uses-setup-env-vars ([#1242](https://github.com/rapidsai/rmm/pull/1242)) [@vyasr](https://github.com/vyasr)
+- Move RMM_LOGGING_ASSERT into separate header ([#1241](https://github.com/rapidsai/rmm/pull/1241)) [@ahendriksen](https://github.com/ahendriksen)
+- Use ARC V2 self-hosted runners for GPU jobs ([#1239](https://github.com/rapidsai/rmm/pull/1239)) [@jjacobelli](https://github.com/jjacobelli)
+
+# RMM 23.04.00 (6 Apr 2023)
+
+## 🐛 Bug Fixes
+
+- Remove MANIFEST.in use auto-generated one for sdists and package_data for wheels ([#1233](https://github.com/rapidsai/rmm/pull/1233)) [@vyasr](https://github.com/vyasr)
+- Fix update-version.sh. ([#1227](https://github.com/rapidsai/rmm/pull/1227)) [@vyasr](https://github.com/vyasr)
+- Specify include_package_data to setup ([#1218](https://github.com/rapidsai/rmm/pull/1218)) [@vyasr](https://github.com/vyasr)
+- Revert changes overriding rapids-cmake repo. ([#1209](https://github.com/rapidsai/rmm/pull/1209)) [@bdice](https://github.com/bdice)
+- Synchronize stream in `DeviceBuffer.c_from_unique_ptr` constructor ([#1100](https://github.com/rapidsai/rmm/pull/1100)) [@shwina](https://github.com/shwina)
+
+## 🚀 New Features
+
+- Use rapids-cmake parallel testing feature ([#1183](https://github.com/rapidsai/rmm/pull/1183)) [@robertmaynard](https://github.com/robertmaynard)
+
+## 🛠️ Improvements
+
+- Stop setting package version attribute in wheels ([#1236](https://github.com/rapidsai/rmm/pull/1236)) [@vyasr](https://github.com/vyasr)
+- Add codespell as a linter ([#1231](https://github.com/rapidsai/rmm/pull/1231)) [@bdice](https://github.com/bdice)
+- Pass `AWS_SESSION_TOKEN` and `SCCACHE_S3_USE_SSL` vars to conda build ([#1230](https://github.com/rapidsai/rmm/pull/1230)) [@ajschmidt8](https://github.com/ajschmidt8)
+- Update to GCC 11 ([#1228](https://github.com/rapidsai/rmm/pull/1228)) [@bdice](https://github.com/bdice)
+- Fix some minor oversights in the conversion to pyproject.toml ([#1226](https://github.com/rapidsai/rmm/pull/1226)) [@vyasr](https://github.com/vyasr)
+- Remove pickle compatibility layer in tests for Python &lt; 3.8. ([#1224](https://github.com/rapidsai/rmm/pull/1224)) [@bdice](https://github.com/bdice)
+- Move external allocators into rmm.allocators module to defer imports ([#1221](https://github.com/rapidsai/rmm/pull/1221)) [@wence-](https://github.com/wence-)
+- Generate pyproject.toml dependencies using dfg ([#1219](https://github.com/rapidsai/rmm/pull/1219)) [@vyasr](https://github.com/vyasr)
+- Run rapids-dependency-file-generator via pre-commit ([#1217](https://github.com/rapidsai/rmm/pull/1217)) [@vyasr](https://github.com/vyasr)
+- Skip docs job in nightly runs ([#1215](https://github.com/rapidsai/rmm/pull/1215)) [@AyodeAwe](https://github.com/AyodeAwe)
+- CI: Remove specification of manual stage for check_style.sh script. ([#1214](https://github.com/rapidsai/rmm/pull/1214)) [@csadorf](https://github.com/csadorf)
+- Use script rather than environment variable to modify package names ([#1212](https://github.com/rapidsai/rmm/pull/1212)) [@vyasr](https://github.com/vyasr)
+- Reduce error handling verbosity in CI tests scripts ([#1204](https://github.com/rapidsai/rmm/pull/1204)) [@AjayThorve](https://github.com/AjayThorve)
+- Update shared workflow branches ([#1203](https://github.com/rapidsai/rmm/pull/1203)) [@ajschmidt8](https://github.com/ajschmidt8)
+- Use date in build string instead of in the version. ([#1195](https://github.com/rapidsai/rmm/pull/1195)) [@bdice](https://github.com/bdice)
+- Stop using versioneer to manage versions ([#1190](https://github.com/rapidsai/rmm/pull/1190)) [@vyasr](https://github.com/vyasr)
+- Update to spdlog&gt;=1.11.0, fmt&gt;=9.1.0. ([#1177](https://github.com/rapidsai/rmm/pull/1177)) [@bdice](https://github.com/bdice)
+- Migrate as much as possible to `pyproject.toml` ([#1151](https://github.com/rapidsai/rmm/pull/1151)) [@jakirkham](https://github.com/jakirkham)
+
 # RMM 23.02.00 (9 Feb 2023)
 
 ## 🐛 Bug Fixes
